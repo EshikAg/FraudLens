@@ -1,0 +1,5 @@
+name: original_gaap
+description: Original GAAP model evaluated through the BankingGAAP adapter.
+config: ../../configs/adaptive_gaap_baseline.yaml
+seed_source: configs/adaptive_gaap_baseline.yaml
+preserve_original_gaap: true

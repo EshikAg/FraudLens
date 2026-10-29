@@ -1,0 +1,4 @@
+name: adaptive_gaap
+description: Drift-triggered replay fine-tuning compared with fixed and retrained GAAP.
+config: ../../configs/adaptation_config.yaml
+seed_source: configs/adaptation_config.yaml

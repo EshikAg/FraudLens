@@ -1,0 +1,29 @@
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Configure stats pid to 79808
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Loading settings from C:\Users\eshik\.config\wandb\settings
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Loading settings from D:\FraudLens\FraudLens\wandb\settings
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'root_dir': 'D:\\FraudLens\\FraudLens\\logs'}
+2026-10-25 09:57:34,814 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2026-10-25 09:57:34,828 INFO    MainThread:79808 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'scripts\\run_baseline.py', 'program_abspath': 'D:\\FraudLens\\FraudLens\\scripts\\run_baseline.py', 'program': 'D:\\FraudLens\\FraudLens\\scripts\\run_baseline.py'}
+2026-10-25 09:57:34,830 INFO    MainThread:79808 [wandb_init.py:_log_setup():527] Logging user logs to D:\FraudLens\FraudLens\logs\wandb\offline-run-20261025_095734-75bouf5m\logs\debug.log
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [wandb_init.py:_log_setup():528] Logging internal logs to D:\FraudLens\FraudLens\logs\wandb\offline-run-20261025_095734-75bouf5m\logs\debug-internal.log
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [wandb_init.py:init():567] calling init triggers
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {'model_name': 'SAGE', 'loader_type': 'MiniF', 'data_name': 'tolokers', 'norm_type': 'norm01', 'preprocess': 'None', 'n_bins': 32, 'd_hidden': 64, 'use_dyple': True, 'dy_raw_bin_width': True, 'init_bin_width': False, 'd_feat_emb': 40, 'pre_n_layers': 1, 'pre_use_bn': True, 'pre_dropout': 0.3, 'gnn_n_layers': 4, 'gnn_dropout': 0.2, 'gnn_use_bn': True, 'gnn_use_res': True, 'gnn_agg': 'max_pool', 'use_mha': True, 'mha_n_layers': 1, 'mha_n_heads': 2, 'mha_alpha': 0.1, 'bs': 64, 'val_bs': 1280, 'lr': 0.001, 'weight_decay': 0.0001, 'max_epochs': 22222, 'patience': 31, 'device': 'cpu', 'device_id': 0, 'seed': 42, 'nowandb': True}
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [wandb_init.py:init():617] starting backend
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [wandb_init.py:init():621] setting up manager
+2026-10-25 09:57:34,831 INFO    MainThread:79808 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2026-10-25 09:57:34,848 INFO    MainThread:79808 [wandb_init.py:init():629] backend started and connected
+2026-10-25 09:57:34,881 INFO    MainThread:79808 [wandb_init.py:init():721] updated telemetry
+2026-10-25 09:57:35,113 INFO    MainThread:79808 [wandb_init.py:init():754] communicating run to backend with 90.0 second timeout
+2026-10-25 09:57:35,173 INFO    MainThread:79808 [wandb_init.py:init():805] starting run threads in backend
+2026-10-25 09:57:37,507 INFO    MainThread:79808 [wandb_run.py:_console_start():2323] atexit reg
+2026-10-25 09:57:37,507 INFO    MainThread:79808 [wandb_run.py:_redirect():2178] redirect: wrap_raw
+2026-10-25 09:57:37,507 INFO    MainThread:79808 [wandb_run.py:_redirect():2243] Wrapping output streams.
+2026-10-25 09:57:37,507 INFO    MainThread:79808 [wandb_run.py:_redirect():2268] Redirects installed.
+2026-10-25 09:57:37,522 INFO    MainThread:79808 [wandb_init.py:init():848] run started, returning control to user process
+2026-10-25 09:57:40,160 INFO    MainThread:79808 [wandb_run.py:_config_callback():1347] config_cb None None {'d_in': 10, 'n_classes': 2, 'dataset': 'tolokers'}
+2026-10-25 10:21:17,047 INFO    MainThread:79808 [wandb_run.py:_finish():2052] finishing run GAAP/75bouf5m
+2026-10-25 10:21:17,047 INFO    MainThread:79808 [wandb_run.py:_atexit_cleanup():2292] got exitcode: 0
+2026-10-25 10:21:17,047 INFO    MainThread:79808 [wandb_run.py:_restore():2275] restore
+2026-10-25 10:21:17,047 INFO    MainThread:79808 [wandb_run.py:_restore():2281] restore done

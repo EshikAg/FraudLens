@@ -1,0 +1,47 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.9",
+    "heartbeatAt": "2026-10-25T04:53:12.835749",
+    "startedAt": "2026-10-25T04:53:12.398279",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--smoke"
+    ],
+    "state": "running",
+    "program": "D:\\FraudLens\\FraudLens\\scripts\\run_baseline.py",
+    "codePathLocal": "scripts\\run_baseline.py",
+    "codePath": "scripts\\run_baseline.py",
+    "git": {
+        "remote": "https://github.com/EshikAg/FraudLens.git",
+        "commit": "b74ee3ef397e1ca2fea37ef1a1b811593743ba1b"
+    },
+    "email": "eshika.233886208@vcet.edu.in",
+    "root": "D:/FraudLens/FraudLens",
+    "host": "DESKTOP-9MLUSGU",
+    "username": "eshik",
+    "executable": "C:\\Users\\eshik\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 1701.0,
+        "min": 0.0,
+        "max": 1701.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1701.0,
+            "min": 0.0,
+            "max": 1701.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 97.65624618530273,
+            "used": 34.48017120361328
+        }
+    },
+    "memory": {
+        "total": 7.906070709228516
+    }
+}

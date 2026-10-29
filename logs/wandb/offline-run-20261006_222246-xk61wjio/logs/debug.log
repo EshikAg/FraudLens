@@ -1,0 +1,39 @@
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Current SDK version is 0.16.5
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Configure stats pid to 3008
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Loading settings from C:\Users\eshik\.config\wandb\settings
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Loading settings from D:\GAAP-master\GAAP-master\wandb\settings
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'root_dir': 'D:\\GAAP-master\\GAAP-master\\logs'}
+2026-10-06 22:22:46,466 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'mycode\\exp\\101_retrain.py', 'program_abspath': 'D:\\GAAP-master\\GAAP-master\\mycode\\exp\\101_retrain.py', 'program': 'D:\\GAAP-master\\GAAP-master\\mycode\\exp\\101_retrain.py'}
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:_log_setup():527] Logging user logs to D:\GAAP-master\GAAP-master\logs\wandb\offline-run-20261006_222246-xk61wjio\logs\debug.log
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:_log_setup():528] Logging internal logs to D:\GAAP-master\GAAP-master\logs\wandb\offline-run-20261006_222246-xk61wjio\logs\debug-internal.log
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:init():567] calling init triggers
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:init():574] wandb.init called with sweep_config: {}
+config: {'model_name': 'SAGE', 'loader_type': 'MiniF', 'data_name': 'tolokers', 'norm_type': 'norm01', 'preprocess': 'None', 'n_bins': 32, 'd_hidden': 64, 'use_dyple': True, 'dy_raw_bin_width': True, 'init_bin_width': False, 'd_feat_emb': 40, 'pre_n_layers': 1, 'pre_use_bn': True, 'pre_dropout': 0.3, 'gnn_n_layers': 4, 'gnn_dropout': 0.2, 'gnn_use_bn': True, 'gnn_use_res': True, 'gnn_agg': 'max_pool', 'use_mha': True, 'mha_n_layers': 1, 'mha_n_heads': 2, 'mha_alpha': 0.1, 'bs': 64, 'val_bs': 1280, 'lr': 0.001, 'weight_decay': 0.0001, 'max_epochs': 22222, 'patience': 31, 'device': 'cpu', 'device_id': 0, 'seed': 42, 'nowandb': True}
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:init():617] starting backend
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [wandb_init.py:init():621] setting up manager
+2026-10-06 22:22:46,481 INFO    MainThread:3008 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2026-10-06 22:22:46,501 INFO    MainThread:3008 [wandb_init.py:init():629] backend started and connected
+2026-10-06 22:22:46,510 INFO    MainThread:3008 [wandb_init.py:init():721] updated telemetry
+2026-10-06 22:22:46,510 INFO    MainThread:3008 [wandb_init.py:init():754] communicating run to backend with 90.0 second timeout
+2026-10-06 22:22:46,518 INFO    MainThread:3008 [wandb_init.py:init():805] starting run threads in backend
+2026-10-06 22:22:48,685 INFO    MainThread:3008 [wandb_run.py:_console_start():2323] atexit reg
+2026-10-06 22:22:48,685 INFO    MainThread:3008 [wandb_run.py:_redirect():2178] redirect: wrap_raw
+2026-10-06 22:22:48,686 INFO    MainThread:3008 [wandb_run.py:_redirect():2243] Wrapping output streams.
+2026-10-06 22:22:48,686 INFO    MainThread:3008 [wandb_run.py:_redirect():2268] Redirects installed.
+2026-10-06 22:22:48,688 INFO    MainThread:3008 [wandb_init.py:init():848] run started, returning control to user process
+2026-10-06 22:22:48,784 INFO    MainThread:3008 [wandb_config.py:__setitem__():151] config set device = cpu - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001C316F920D0>>
+2026-10-06 22:22:48,784 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb device cpu None
+2026-10-06 22:22:49,412 INFO    MainThread:3008 [wandb_config.py:__setitem__():151] config set d_in = 10 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001C316F920D0>>
+2026-10-06 22:22:49,413 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb d_in 10 None
+2026-10-06 22:22:49,413 INFO    MainThread:3008 [wandb_config.py:__setitem__():151] config set n_classes = 2 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001C316F920D0>>
+2026-10-06 22:22:49,413 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb n_classes 2 None
+2026-10-06 22:22:49,414 INFO    MainThread:3008 [wandb_config.py:__setitem__():151] config set n_nodes = 11758 - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001C316F920D0>>
+2026-10-06 22:22:49,414 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb n_nodes 11758 None
+2026-10-06 22:22:49,480 INFO    MainThread:3008 [wandb_config.py:__setitem__():151] config set dataset = tolokers - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001C316F920D0>>
+2026-10-06 22:22:49,481 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb dataset tolokers None
+2026-10-06 22:22:49,481 INFO    MainThread:3008 [wandb_run.py:_config_callback():1347] config_cb None None {'d_in': 10, 'n_classes': 2, 'dataset': 'tolokers'}
+2026-10-07 01:04:37,993 INFO    MainThread:3008 [wandb_run.py:_finish():2052] finishing run GAAP/xk61wjio
+2026-10-07 01:04:37,996 INFO    MainThread:3008 [wandb_run.py:_atexit_cleanup():2292] got exitcode: 0
+2026-10-07 01:04:37,997 INFO    MainThread:3008 [wandb_run.py:_restore():2275] restore
+2026-10-07 01:04:37,997 INFO    MainThread:3008 [wandb_run.py:_restore():2281] restore done

@@ -1,0 +1,5 @@
+name: classical_baselines
+description: Chronological sklearn baselines with configurable optional XGBoost.
+config: ../../configs/evaluation.yaml
+models: [logistic_regression, random_forest]
+seed_source: configs/evaluation.yaml

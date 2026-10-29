@@ -1,0 +1,10 @@
+name: adaptive_gaap_ablation
+description: Ablation variants are run only when an implementation supplies predictions.
+config: ../../configs/evaluation.yaml
+variants:
+  - basic_gnn
+  - gaap
+  - gaap_temporal_graph
+  - gaap_temporal_graph_drift_detection
+  - gaap_adaptive_retraining
+  - adaptive_gaap_explainability

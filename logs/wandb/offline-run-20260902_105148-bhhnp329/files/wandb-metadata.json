@@ -1,0 +1,42 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.9",
+    "heartbeatAt": "2026-09-02T05:21:48.911046",
+    "startedAt": "2026-09-02T05:21:48.836001",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "-cn",
+        "yelp"
+    ],
+    "state": "running",
+    "program": "D:\\GAAP-master\\GAAP-master\\mycode\\exp\\101_retrain.py",
+    "codePathLocal": "mycode\\exp\\101_retrain.py",
+    "codePath": "mycode\\exp\\101_retrain.py",
+    "host": "DESKTOP-9MLUSGU",
+    "username": "eshik",
+    "executable": "C:\\Users\\eshik\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 1701.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 1701.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 97.65624618530273,
+            "used": 13.682464599609375
+        }
+    },
+    "memory": {
+        "total": 7.906070709228516
+    }
+}

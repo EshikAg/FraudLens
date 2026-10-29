@@ -1,0 +1,4 @@
+name: concept_drift
+description: Synthetic behavior shift, drift detection, and adaptation recovery.
+config: ../../configs/drift_config.yaml
+seed_source: ../../configs/evaluation.yaml
