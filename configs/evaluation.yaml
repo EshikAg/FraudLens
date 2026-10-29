@@ -1,0 +1,45 @@
+seed: 42
+dataset: synthetic_banking_transactions
+output_dir: reports
+threshold: 0.5
+
+temporal:
+  timestamp_column: timestamp
+  fractions: [0.5, 0.15, 0.15, 0.2]
+  rolling_initial_train_timestamps: 60
+  rolling_test_timestamps: 12
+  rolling_step_timestamps: 12
+
+benchmark:
+  models: [logistic_regression, random_forest]
+  optional_models: [xgboost]
+  include_graph_models: [original_gaap, adaptive_gaap]
+  precision_recall_k: [10, 50, 100]
+  latency_repeats: 30
+
+drift_experiment:
+  adaptation_config: configs/adaptation_config.yaml
+  drift_config: configs/drift_config.yaml
+  rows_per_period: 220
+  smoke_rows_per_period: 132
+  smoke_epochs: 1
+
+ablation:
+  variants:
+    - basic_gnn
+    - gaap
+    - gaap_temporal_graph
+    - gaap_temporal_graph_drift_detection
+    - gaap_adaptive_retraining
+    - adaptive_gaap_explainability
+
+report:
+  figures_dir: reports/figures
+  tables_dir: reports/tables
+  results_dir: reports/results
+  final_report: reports/final_results.md
+  limitations:
+    - Results depend on the configured dataset and chronological evaluation windows.
+    - Synthetic-data performance does not establish performance on production banking data.
+    - Model comparisons are descriptive unless repeated-seed confidence intervals are supplied.
+    - Unavailable model variants and operational measurements are reported as unavailable.

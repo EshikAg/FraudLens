@@ -1,0 +1,44 @@
+seed: 42
+feature_schema_version: banking-transaction-v1
+registry_dir: artifacts/adaptive_gaap_registry
+gaap_config: configs/adaptive_gaap_baseline.yaml
+explainability_config: configs/explainability_config.yaml
+
+adaptation:
+  recent_ratio: 0.7
+  replay_ratio: 0.3
+  samples_per_adaptation: 300
+  evaluation_fraction: 0.2
+  buffers:
+    capacity: 5000
+    half_life_days: 180
+    recent_half_life_days: 30
+    minimum_temporal_weight: 0.1
+  promotion:
+    metric: average_precision
+    minimum_recent_improvement: 0.0
+    maximum_validation_drop: 0.06
+    maximum_replay_drop: 0.03
+    minimum_recent_metric: 0.5
+
+incremental_training:
+  max_epochs: 3
+  patience: 2
+
+drift_monitor:
+  feature_drift:
+    features: [amount, transaction_type, device_id, ip_id, receiver_account_id]
+    min_samples: 20
+    methods: [psi, ks, jensen_shannon]
+    psi_threshold: 0.2
+    ks_alpha: 0.01
+    js_threshold: 0.1
+  concept_drift:
+    threshold: 1.5
+    delta: 0.0
+    min_instances: 10
+    prediction_threshold: 0.5
+
+experiment:
+  rows_per_period: 220
+  max_epochs: 3

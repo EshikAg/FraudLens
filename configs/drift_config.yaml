@@ -1,0 +1,34 @@
+seed: 42
+output_path: artifacts/drift/synthetic_drift_report.json
+
+feature_drift:
+  features:
+    - amount
+    - transaction_velocity_1h
+    - transaction_type
+    - device_usage
+    - ip_usage
+    - beneficiary_behaviour
+    - graph_degree
+    - transaction_embedding_mean
+  methods: [psi, ks, jensen_shannon]
+  psi_threshold: 0.2
+  ks_alpha: 0.01
+  js_threshold: 0.1
+  missing_rate_threshold: 0.1
+  min_samples: 20
+  bins: 10
+  consecutive_windows: 1
+
+concept_drift:
+  detector: page_hinkley
+  threshold: 2.0
+  delta: 0.005
+  min_instances: 20
+  prediction_threshold: 0.5
+  window_size: 100
+
+experiment:
+  rows_per_period: 80
+  static_amount_threshold: 300.0
+  drift_timestamp: "2025-02-01T00:00:00Z"

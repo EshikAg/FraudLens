@@ -1,0 +1,38 @@
+# Transaction is the primary node; edges point from historical transactions
+# to later transactions. Same-time transactions are never connected.
+max_history_hours: 168
+default_snapshot_window: 24h
+
+# Omit a field when its value is missing. Labels are never used in edge rules.
+edge_rules:
+  - name: same_sender
+    field: sender_account_id
+    enabled: true
+  - name: same_receiver
+    field: receiver_account_id
+    enabled: true
+  - name: same_beneficiary
+    field: receiver_account_id
+    enabled: true
+  - name: same_device
+    field: device_id
+    enabled: true
+  - name: same_ip
+    field: ip_id
+    enabled: true
+  - name: same_merchant
+    field: merchant_id
+    enabled: true
+  - name: same_channel
+    field: channel
+    enabled: false
+  - name: temporal_proximity
+    field: null
+    connect_all_previous: true
+    enabled: false
+
+# "auto" uses preprocessing.feature_engineering's feature_columns attribute
+# where present, otherwise numeric columns plus configured categorical columns.
+feature_columns: null
+categorical_columns: [transaction_type, channel]
+fraud_labels: [1, fraud, suspicious, true]

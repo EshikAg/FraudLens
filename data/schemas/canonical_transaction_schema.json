@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "fields": [
+    "transaction_id",
+    "timestamp",
+    "sender_account_id",
+    "receiver_account_id",
+    "amount",
+    "currency",
+    "transaction_type",
+    "channel",
+    "merchant_id",
+    "device_id",
+    "ip_id",
+    "location",
+    "sender_balance_before",
+    "sender_balance_after",
+    "receiver_balance_before",
+    "receiver_balance_after",
+    "label"
+  ],
+  "missing_value": "nullable; absent source fields are not inferred"
+}

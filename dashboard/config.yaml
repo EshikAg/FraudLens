@@ -1,0 +1,11 @@
+api_base_url: http://127.0.0.1:8000
+request_timeout_seconds: 5
+prediction_timeout_seconds: 120
+demo:
+  rows: 24
+  seed: 42
+artifacts:
+  model_registry: artifacts/adaptive_gaap_registry/registry.json
+  adaptation_report: artifacts/adaptation/adaptation_experiment.json
+  drift_report: artifacts/drift/synthetic_drift_report.json
+  training_report: artifacts/adaptive_gaap/training_report.json

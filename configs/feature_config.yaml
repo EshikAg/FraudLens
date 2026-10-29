@@ -1,0 +1,4 @@
+windows_minutes: [10, 60, 1440]
+unusual_time_threshold_hours: 4
+rapid_beneficiary_threshold: 3
+suspicious_labels: [1, "1", true, "true", fraud, suspicious]

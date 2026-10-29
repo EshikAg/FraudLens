@@ -1,0 +1,42 @@
+# Set model_directory to a saved BankingGAAP model directory before deployment.
+model_directory: artifacts/adaptive_gaap/model
+schema_config: configs/transaction_schema.yaml
+explainability_config: configs/explainability_config.yaml
+drift_config:
+  feature_drift:
+    features:
+      - amount
+      - transaction_velocity_1h
+      - transaction_type
+      - device_id
+      - ip_id
+    methods: [psi, ks, jensen_shannon]
+    min_samples: 20
+    bins: 10
+    psi_threshold: 0.2
+    ks_alpha: 0.01
+    js_threshold: 0.1
+    missing_rate_threshold: 0.1
+    consecutive_windows: 1
+  concept_drift:
+    threshold: 2.0
+    delta: 0.005
+    min_instances: 20
+    prediction_threshold: 0.5
+    window_size: 1000
+
+max_history_transactions: 10000
+drift_window_size: 500
+metrics_window_size: 1000
+
+# Demonstration policy only. Tune and approve thresholds/decisions for deployment.
+risk_thresholds:
+  low: 0.2
+  medium: 0.5
+  high: 0.8
+
+decisions:
+  low: APPROVE
+  medium: STEP_UP_AUTHENTICATION
+  high: REVIEW
+  critical: BLOCK

@@ -1,0 +1,51 @@
+version: 1
+fields:
+  transaction_id:
+    source: transaction_id
+    aliases: [transactionId, id, txn_id]
+  timestamp:
+    source: timestamp
+    aliases: [transaction_timestamp, datetime, date, time]
+  sender_account_id:
+    source: sender_account_id
+    aliases: [sender_id, from_account, source_account, account_id]
+  receiver_account_id:
+    source: receiver_account_id
+    aliases: [receiver_id, to_account, destination_account, beneficiary_id]
+  amount:
+    source: amount
+    aliases: [transaction_amount, txn_amount, value]
+  currency:
+    source: currency
+    aliases: [currency_code]
+  transaction_type:
+    source: transaction_type
+    aliases: [type, txn_type]
+  channel:
+    source: channel
+    aliases: [payment_channel]
+  merchant_id:
+    source: merchant_id
+    aliases: [merchant, payee_id]
+  device_id:
+    source: device_id
+    aliases: [device, device_identifier]
+  ip_id:
+    source: ip_id
+    aliases: [ip_address, ip, source_ip]
+  location:
+    source: location
+    aliases: [geo_location, city, region]
+  sender_balance_before:
+    source: sender_balance_before
+    aliases: [balance_before]
+  sender_balance_after:
+    source: sender_balance_after
+    aliases: [balance_after]
+  receiver_balance_before:
+    source: receiver_balance_before
+  receiver_balance_after:
+    source: receiver_balance_after
+  label:
+    source: label
+    aliases: [is_fraud, fraud_label, is_suspicious]

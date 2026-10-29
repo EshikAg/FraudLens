@@ -1,0 +1,77 @@
+seed: 42
+model_version: gaap-banking-v1
+output_dir: artifacts/adaptive_gaap
+threshold: 0.5
+exclude_label_derived_features: true
+
+data:
+  source: synthetic
+  synthetic_rows: 132
+  synthetic_csv: data/raw/adaptive_gaap_synthetic.csv
+
+schema_config:
+  path: configs/transaction_schema.yaml
+feature_config: configs/feature_config.yaml
+
+graph_config:
+  max_history_hours: 168
+  default_snapshot_window: 24h
+  edge_rules:
+    - name: same_sender
+      field: sender_account_id
+      enabled: true
+    - name: same_receiver
+      field: receiver_account_id
+      enabled: true
+    - name: same_device
+      field: device_id
+      enabled: true
+    - name: same_ip
+      field: ip_id
+      enabled: true
+    - name: same_merchant
+      field: merchant_id
+      enabled: true
+  feature_columns: null
+  categorical_columns: [transaction_type, channel]
+  fraud_labels: [1, fraud, suspicious, true]
+
+labels:
+  fraud: [1, "1", true, "true", fraud, suspicious]
+  legitimate: [0, "0", false, "false", legitimate, legit, genuine]
+
+split:
+  train_fraction: 0.7
+  validation_fraction: 0.15
+
+training:
+  max_epochs: 3
+  patience: 2
+
+model:
+  model_name: SAGE
+  loader_type: MiniF
+  data_name: banking_transactions
+  norm_type: none
+  preprocess: None
+  n_bins: 8
+  d_hidden: 16
+  use_dyple: true
+  dy_raw_bin_width: true
+  init_bin_width: false
+  d_feat_emb: 8
+  pre_n_layers: 1
+  pre_use_bn: true
+  pre_dropout: 0.1
+  gnn_n_layers: 2
+  gnn_dropout: 0.1
+  gnn_use_bn: true
+  gnn_use_res: true
+  gnn_agg: max_pool
+  use_mha: false
+  mha_n_layers: 1
+  mha_n_heads: 1
+  lr: 0.001
+  weight_decay: 0.0001
+  seed: 42
+  num_threads: 1

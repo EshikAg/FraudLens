@@ -1,0 +1,46 @@
+# Reproducible baseline based on the most recent recorded GAAP run:
+# python mycode/exp/101_retrain.py -cn tolokers device=cpu
+model_name: SAGE
+loader_type: MiniF
+data_name: tolokers
+
+norm_type: norm01
+preprocess: None
+n_bins: 32
+
+d_hidden: 64
+use_dyple: true
+dy_raw_bin_width: true
+init_bin_width: false
+d_feat_emb: 40
+
+pre_n_layers: 1
+pre_use_bn: true
+pre_dropout: 0.3
+
+gnn_n_layers: 4
+gnn_dropout: 0.2
+gnn_use_bn: true
+gnn_use_res: true
+gnn_agg: max_pool
+
+use_mha: true
+mha_n_layers: 1
+mha_n_heads: 2
+mha_alpha: 0.1
+
+bs: 64
+val_bs: 1280
+
+lr: 0.001
+weight_decay: 0.0001
+max_epochs: 22222
+patience: 31
+device: cpu
+device_id: 0
+seed: 42
+nowandb: true
+
+baseline:
+  output_dir: artifacts/baseline
+  wandb_mode: offline
